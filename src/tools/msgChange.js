@@ -2,8 +2,10 @@ let task = null;
 let tasks = [];
 let msg = "";
 let callback = null;
+//默认回调
 let defaultCalbback = function (msg) {
     console.log(msg)
+
 }
 
 function haveTask() {
