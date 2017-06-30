@@ -4,7 +4,6 @@ let msg = "";
 let callback = null;
 let defaultCalbback = function (msg) {
     console.log(msg)
-
 }
 
 function haveTask() {
