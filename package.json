@@ -1,0 +1,50 @@
+{
+    "name": "uou",
+    "version": "1.0.0",
+    "description": "boring",
+    "main": "index.js",
+    "scripts": {
+        "build:test": "cross-env NODE_ENV=development node ./build/bin/build",
+        "build:pro": "cross-env NODE_ENV=production node ./build/bin/build NODE_ENV=production",
+        "server:pro": "cross-env NODE_ENV=production node ./build/bin/server NODE_ENV=production",
+        "server:test": "cross-env NODE_ENV=development node ./build/bin/server NODE_ENV=development"
+    },
+    "keywords": [
+        "boring"
+    ],
+    "dependencies": {
+        "vue": "^2.3.3",
+        "vue-loader": "^12.1.1",
+        "vue-resource": "^1.3.3",
+        "vue-router": "^2.5.3",
+        "webpack": "^2.6.1"
+    },
+    "devDependencies": {
+        "babel-core": "^6.24.1",
+        "babel-loader": "^7.0.0",
+        "babel-plugin-dynamic-import-webpack": "^1.0.1",
+        "babel-plugin-syntax-dynamic-import": "^6.18.0",
+        "babel-plugin-transform-async-to-generator": "^6.24.1",
+        "babel-plugin-transform-regenerator": "^6.24.1",
+        "babel-plugin-transform-runtime": "^6.23.0",
+        "babel-preset-es2015": "^6.24.1",
+        "cross-env": "^5.0.1",
+        "css-loader": "^0.28.3",
+        "extract-text-webpack-plugin": "^2.1.0",
+        "file-loader": "^0.11.1",
+        "html-webpack-plugin": "^2.28.0",
+        "node-sass": "^4.5.3",
+        "progress-bar-webpack-plugin": "^1.9.3",
+        "sass-loader": "^6.0.5",
+        "shelljs": "^0.7.7",
+        "style-loader": "^0.18.1",
+        "uglify-js": "^3.0.11",
+        "url-loader": "^0.5.8",
+        "vue-template-compiler": "^2.3.3",
+        "webpack": "^2.6.1",
+        "webpack-bundle-analyzer": "^2.8.2",
+        "webpack-dev-server": "^2.4.5"
+    },
+    "author": "xuexk",
+    "license": "ISC"
+}
