@@ -34,13 +34,12 @@
 <script>
     import happy from "status/images/icon/happy.svg"
     import unHappy from "status/images/icon/unhappy.svg"
-    import {
-        msgChange
-    } from "tools/msgChange.js";
+    import typeWriter from "tools/msgChange.js";
     let titleChange = [{
         type: "add",
         msg: "Work",
-        time: 200
+        time: 200,
+        repeat:true
     
     }, {
         type: "remove",
@@ -57,8 +56,29 @@
         time: 50
     }, {
         type: "add",
+        msg: "sport",
+        time: 100
+    }, {
+        type: "remove",
+        count: 4,
+        time: 100
+    },{
+        type: "add",
+        msg: "leeping",
+        time: 100
+    },{
+         type: "remove",
+        count: 8,
+        time: 50
+    },{
+        type: "add",
         msg: "money",
         time: 300
+    },{
+        type:"remove",
+        count:5,
+        time:100,
+        repeat:true
     }]
     
     export default {
@@ -78,10 +98,11 @@
         },
         mounted() {
             var that = this;
+            var typeWrite = new typeWriter(titleChange, function(msg) {
+                that.$data.titleText = msg
+            });
             setTimeout(function() {
-                msgChange(titleChange, function(msg) {
-                    that.$data.titleText = msg
-                })
+                typeWrite.run();
             }, 1000)
     
         }
@@ -116,6 +137,7 @@
         font-size:47px;
         font-weight:300;
         margin: 10vh 0 5vh 15px;
+        height:135;
         color:#FFF;
     }
     .today_title{
