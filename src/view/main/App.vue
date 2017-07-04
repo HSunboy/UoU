@@ -38,8 +38,8 @@
     let titleChange = [{
         type: "add",
         msg: "Work",
-        time: 200,
-        repeat:true
+        time: 200
+        
     
     }, {
         type: "remove",
@@ -77,6 +77,20 @@
     },{
         type:"remove",
         count:5,
+        time:100
+        
+    },{
+        type: "add",
+        msg: "life",
+        time: 300
+    },{
+        type:"add",
+        msg:"eeeeee",
+        time:200,
+        repeat:true
+    },{
+        type:"remove",
+        count:6,
         time:100,
         repeat:true
     }]
@@ -166,6 +180,7 @@
     background:#FFF;
     display:flex;
     flex-direction: column;
+    flex-shrink:1;
     .top-menu{
         width:100%;
         background-image: linear-gradient(to left,#cc2b5e,#753a88);
